@@ -13,15 +13,23 @@
         height:360px;
         object-fit:cover;
         max-height: 360px;
+        margin-bottom:16px;
       }
     </style>
   </head>
   <body>
+    {% include "nav.html" %}
+    <img class="img-fluid" id="banner" src="https://aeb3b918-f561-4e5f-a85b-9a46941e225d-00-a6g1kzhxjsfv.riker.replit.dev/static/banner2.avif">
    <div class="container">
      <h1 class="text-center mt-2 mb-4" >{{company_name}} Carrer</h1>
-       <img class="img-fluid" id="banner" src="https://aeb3b918-f561-4e5f-a85b-9a46941e225d-00-a6g1kzhxjsfv.riker.replit.dev/static/banner2.avif">
-       <h2 class="text-center mt-2 mb-4">About Job</h2>
+       <div class=row style= "margin-bottom:16px;" >
+         <div class="col-md-6" >
        <p class="lead" >Career growth is a journey of continuous learning, skill enhancement, and seizing new opportunities. It involves setting goals, embracing challenges, and leveraging innovation to advance in various professions. With the right mindset and determination, individuals can climb the career ladder, explore new possibilities, and achieve success in their chosen fields.</p>
+         </div>
+         <div class="d-none d-md-block col-6">
+         <img src="/static/people.jpg" style="height:320px; border-radius:4px;">
+         </div>
+       </div>
        <h2 class="text-center mt-2 mb-4" >Open Positions</h2>
        <div>
          {% for job in jobs %}
@@ -30,11 +38,11 @@
        </div>
 
      <div class="text-center" >
-       <button class="btn btn-primary btn-lg" >Contact Us</button>
-       <p class="mt-4">Copyright 2025, Job</p>
+       <a href="mailto:hello@sumit.ai?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E" class="btn btn-primary btn-lg" >Contact Us</a>
      </div>
      
    </div>
+    {% include "footer.html"%}
 
   </body>
 
